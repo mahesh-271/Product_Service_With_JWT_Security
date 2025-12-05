@@ -3,7 +3,6 @@ package com.product.management.product_management.controller;
 
 import com.product.management.product_management.dto.ProductDTO;
 import com.product.management.product_management.service.ProductService;
-import com.product.management.product_management.service.ProductServiceDuplicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
