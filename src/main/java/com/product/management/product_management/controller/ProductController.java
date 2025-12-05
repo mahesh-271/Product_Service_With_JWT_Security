@@ -28,19 +28,19 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-//    @PostMapping("/createProduct")
-//    public ProductDTO createProduct(@RequestBody ProductDTO productDTO){
-//        return productService.createProduct(productDTO);
-//    }
+    @PostMapping("/createProduct")
+    public ProductDTO createProduct(@RequestBody ProductDTO productDTO){
+        return productService.createProduct(productDTO);
+    }
 
     @PutMapping("/updateProduct")
     public ProductDTO updateProduct(@RequestBody ProductDTO productDTO){
         return productService.updateProductData(productDTO);
     }
 
-//    @DeleteMapping("/deleteProduct/{id}")
-//    public void  deleteProductById(@PathVariable Long id){
-//        productService.deleteProduct(id);
-//        log.info("Product deleted succcessfully");
-//    }
+    @DeleteMapping("/deleteProduct/{id}")
+    public void  deleteProductById(@PathVariable Long id){
+        productService.deleteProduct(id);
+        log.info("Product deleted succcessfully");
+    }
 }

@@ -50,7 +50,7 @@ public class ProductService {
          log.info("the product is deleted with this _ : " + id);
     }
 
-    public ProductDTO createProdcut(ProductDTO productDTO) {
+    public ProductDTO createProduct(ProductDTO productDTO) {
 
         if(productRepository.existsById(productDTO.getId())) {
             throw new RuntimeException("The product is already present in the database");
