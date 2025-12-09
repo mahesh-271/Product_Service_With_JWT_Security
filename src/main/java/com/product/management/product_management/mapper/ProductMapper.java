@@ -12,6 +12,7 @@ public class ProductMapper {
 
         return ProductDTO.builder()
                 .id(product.getId())
+                .name(product.getName())
                 .price(product.getPrice())
                 .stock(product.getStock())
                 .description(product.getDescription())
@@ -22,6 +23,7 @@ public class ProductMapper {
 
         return ProductDTO.builder()
                 .id(product.getId())
+                .name(product.getName())
                 .price(product.getPrice())
                 .stock(product.getStock())
                 .description(product.getDescription())
@@ -32,6 +34,7 @@ public class ProductMapper {
 
         return Product.builder()
                 .id(product.getId())
+                .name(product.getName())
                 .price(product.getPrice())
                 .stock(product.getStock())
                 .description(product.getDescription())
