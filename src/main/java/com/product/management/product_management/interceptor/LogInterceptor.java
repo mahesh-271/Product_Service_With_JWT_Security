@@ -35,7 +35,6 @@ public class LogInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
 
         List<Integer> data = List.of(3,1,5,2,4,4,2,324,4,2,2,6,63,2);
-
         log.info("Post handle is started : " );
 
         data.stream()
