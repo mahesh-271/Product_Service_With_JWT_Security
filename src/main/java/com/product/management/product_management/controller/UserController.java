@@ -25,11 +25,10 @@ public class UserController {
     @PostMapping("/api/auth/login")
     public ResponseEntity<String> generateToken(@RequestBody UserRequest request) {
 
-        Integer id = 2;
-        User user = userRepository.findByUserName(request.getUserName());
+        var user = userRepository.findByUserName(request.userName());
 
-        if(user.getUserName().equals(request.getUserName())){
-            String token = jwtUtil.generateToken(request.getUserName() , List.of("Admin"));
+        if(user.getUserName().equals(request.userName())){
+            var token = jwtUtil.generateToken(request.userName() , List.of("Admin"));
 
             return  ResponseEntity.ok(token);
         }

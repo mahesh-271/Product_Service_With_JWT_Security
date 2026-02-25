@@ -1,11 +1,9 @@
 package com.product.management.product_management.config;
 
 import com.product.management.product_management.util.JwtAuthenticationFilter;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -30,6 +28,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/url1", "/url2", "/sequential", "/parallel").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/products/**").hasAnyRole("Admin")
                         .anyRequest().authenticated()
                 )
