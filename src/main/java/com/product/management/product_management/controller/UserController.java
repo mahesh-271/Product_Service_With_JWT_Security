@@ -28,10 +28,6 @@ public class UserController {
     @PostMapping("/api/auth/login")
     public ResponseEntity<String> generateToken(@RequestBody UserRequest request) {
 
-        if(true){
-            throw  new ResourceNotFoundException ( "Resources is not found as of now" );
-        }
-
         var user = userRepository.findByUserName(request.userName());
 
         if(user.getUserName().equals(request.userName())){
